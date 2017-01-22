@@ -6,7 +6,7 @@
 <title>rank</title>
 
 <?php 
-$db=new MySQLi('localhost','root','86number86','csi');
+$db=new MySQLi('localhost','root','hidden','csi');
 $db->query("SET @rnk=0;");
 $db->query("SET @rank=1;");
 $db->query("SET @curscore=0;");
