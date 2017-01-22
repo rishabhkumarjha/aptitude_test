@@ -17,7 +17,7 @@ if($response!=null && $response->success )
 	echo("Captcha varified");
 	}
 
-$db=new MySQLi('localhost','root','86number86','csi');
+$db=new MySQLi('localhost','root','hidden','csi');
 $name=$_POST["name"];
 $year=$_POST["year"];
 $div=$_POST["div"];
