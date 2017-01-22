@@ -1,0 +1,25 @@
+/*header styles*/
+	header#page-header{
+		height: 150px;
+		background: orange;
+		}
+	header#page-header >div.row{
+		position: relative;
+		top: 30%;
+		transform: translateY(-40%)
+
+/*content styling*/
+section#page-content, section#page-content > #services{
+padding-top: 3em;
+}
+
+section#page-content{
+padding-bottom: 3em;
+}
+
+.log-in-form {
+	border: 1px solid;
+	padding: 3rem;
+	border-radius: 5px;
+	border-color: #0F0;
+}

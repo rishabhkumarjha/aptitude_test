@@ -1,0 +1,129 @@
+<html>
+<head>
+<link rel="stylesheet" href="css/foundation.css" />
+<link rel="stylesheet" href="css/app.css" />
+<title>CSI MIT PUNE</title>
+
+<script type="text/javascript">
+	function check()
+	{
+		if(document.getElementById("name").value=="" || document.getElementById("div").value=="" || document.getElementById("mob").value=="")
+		{
+			alert("all fields are mandatory");
+			document.getElementById("name").focus();
+			return false;
+			}
+			var mob=document.getElementById("mob").value;
+			var div=document.getElementById("div").value;
+		if((mob.length)!=10 || isNaN(mob) || (mob%1)!=0)
+		{
+			alert("Enter a valid 10 digit mobile number");
+			document.getElementById("mob").focus();
+			return false;
+		}
+		var lim=2;
+		if(document.getElementById("year").value=="FE")
+		{
+			lim=11;
+			}
+		if(isNaN(div) || (div%1)!=0 || div>lim || div<1)
+		{
+			alert("Division should be a number less than " + lim);
+			document.getElementById("mob").focus();
+			return false;
+		}
+	}
+	
+</script>
+
+<script src='https://www.google.com/recaptcha/api.js'></script>
+
+</head>
+<body>
+<header id="page-header">
+	   <div class="row">
+	   	<div class="small-12 columns">
+			<h1 class="text-center">CSI MIT PUNE CHAPTER</h1>
+			<p class="text-center">Aptitude</p>
+		</div>
+	   </div>
+	</header><br><br>
+<legend class="text-center small-centered">Aptitude Registration Form</legend>
+<form action="submit.php" method="post" onSubmit="return check()">	
+  <div class="large-offset-4 row">
+  	<div class="large-6 column">
+  	<input type="text" id="name" name="name" placeholder="Name (first last middle)" required/>
+  	</div>
+  </div>
+  <div class="large-offset-4 row">
+  	<div class="large-6 small-12 column">
+    	<div class="row">
+        	<div class="large-6 small-6 column">
+             	<select name="year" id="year">
+        			<option value="FE">FE</option>
+        			<option value="SE">SE</option>
+        			<option value="TE">TE</option>
+        			<option value="BE">BE</option>
+      			</select>
+            </div>
+            <div class="large-6 small-6 columns">
+      			<input type="text" name="div" id="div" placeholder="Division" maxlength="2" required/>
+    		</div>
+        </div>
+    </div>
+  </div>
+  <div class="large-offset-4 row">
+  	<div class="large-6 small-12 column">
+    	<div class="row">
+        	<div class="large-6 small-6 column">
+            	<label>Department</label>
+            	<select name="dept">
+            		<option value="comp">Computer</option>
+            		<option value="entc">E&TC</option>
+            		<option value="mech">Mechanical</option>
+            		<option value="IT">IT</option>
+                    <option value="Polymer">Polymer</option>
+                    <option value="Others">Others</option>
+          		</select>
+            </div>
+            <div class="large-6 small-6 column">
+            	 <label>Are You a CSI Memeber?</label>
+          			<select name="member" id="mem">
+            			<option value="TRUE">YES</option>
+            			<option value="FALSE">NO</option>
+          			</select>
+            </div>
+        </div>
+    </div>
+  </div>
+  <div class="large-offset-4 row">
+  	<div class="large-6 small-12 column">
+    	<div class="row">
+        	<div class="large-6 small-6 column">
+            	<input type="text" name="mob" id="mob" placeholder="Mobile Number" maxlength="10" required/>
+            </div>
+            
+            <div class="large-6 small-6 column">
+            	<input type="email" placeholder="email" name="email" required>
+            </div>
+                                    
+            <div class="large-6 small-6 column">
+            	<input type="submit" class="button success" value="Submit" style="width:200px">
+            </div>
+             <div class="large-6 small-6 column">
+            	<div class="g-recaptcha" data-sitekey="6Lerzw8UAAAAAH2wqr0iBXHgFNsLq7icawGuJjdV" style="transform:scale(0.66);-webkit-transform:scale(0.66);transform-origin:0 0;-webkit-transform-origin:0 0;"></div>
+            </div>
+             <b>
+  			<div id="fee" class="text-center">
+  			Applicable Fee : 50
+  			</div></b>
+        </div><br><br>
+        <div class="text-center columns large-centered small-centered">
+        <img src="csi.png" style="height:15%"><img src="mit.png" style="height:15%">
+        </div>
+    </div>
+  </div>
+ 
+</form>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<html>
+<head>
+<link rel="stylesheet" href="css/foundation.css" />
+<link rel="stylesheet" href="css/app.css" />
+<title>CSI MIT PUNE</title>
+</head>
+<body>
+<form action="submit.php" method="post">
+  <div class="row">
+    <div class="small-6 column">
+      <input type="text" placeholder="Name (first middle last)" name="name" />
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-6 columns">
+      <select name="year">
+        <option value="FE">FE</option>
+        <option value="SE">SE</option>
+        <option value="TE">TE</option>
+        <option value="BE">BE</option>
+      </select>
+    </div>
+    <div class="large-6 columns">
+      <input type="text" name="div" placeholder="Division" />
+    </div>
+  </div>
+  <div class="row">
+    <div class="small-6 medium-4 column">
+      <div class="row">
+        <div class="small-3 medium-4 column">
+          <select name="dept">
+            <option value="comp">comp</option>
+            <option value="entc">ENTC</option>
+            <option value="mech">Mechanical</option>
+            <option value="IT">IT</option>
+          </select>
+        </div>
+        <div class="small-3 medium-4 columns">
+          <label>CSI Memeber?</label>
+          <select name="member">
+            <option value="yes">yes</option>
+            <option value="no">no</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    </div>
+</form>
+</body>
+</html>

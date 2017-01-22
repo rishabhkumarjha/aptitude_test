@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="css/foundation.css" /> 
+<link rel="stylesheet" href="css/app.css" />
+<title>login</title>
+
+<script type="application/javascript">
+
+function showPass(){
+	
+	if(document.getElementById("show-password").value)
+		document.getElementById("pass").type="text";
+	else
+		document.getElementById("pass").type="password";
+	}
+
+</script>
+
+</head>
+
+<body>	
+        <div class="row">
+  <div class="medium-6 medium-centered large-4 large-centered columns">
+
+    <form method="post" action="auth.php">
+      <div class="row column log-in-form">
+        <h4 class="text-center">Log in with you email account</h4>
+        <label>Email
+          <input type="email" placeholder="somebody@example.com" name="email" required="required">
+        </label>
+        <label>Password
+          <input type="password" placeholder="Password" name="pass" id="pass" required="required">
+        </label>
+        <input id="show-password" type="checkbox" onchange="showPass()" ><label for="show-password">Show password</label>
+        <p><input type="submit" value="Login" class="button expanded"></p>
+        <p class="text-center"><a href="#">Forgot your password?</a></p>   
+      </div>
+    </form>
+
+  </div>
+</div></body>
+</html>
