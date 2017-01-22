@@ -11,7 +11,7 @@ $result=Array();
 $result=$_POST;
 print_r($result);
 $usr='root';
-$pass='86number86';
+$pass='hidden';
 $p1=new MySQLi('localhost',$usr,$pass,'csi');
 $p1->query("create table s$id (id int,res char(1))") or die("Cannot record ur response ur entries already exists <b>contact admin</b>");
 echo($p1->error);
