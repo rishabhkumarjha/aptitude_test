@@ -18,7 +18,7 @@ function resetit(id1){
 $uid=$_POST["uid"];
 
 $usr="root";
-$pass="86number86";
+$pass="hidden";
 $qdb = new MySQLi('localhost',$usr,$pass,'csi');
 
 $random=range(1,45);
