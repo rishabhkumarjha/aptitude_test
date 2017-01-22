@@ -5,7 +5,7 @@
 <title></title>
 <?php 
 $usr='root';
-$pass='86number86';
+$pass='hidden';
 $db='csi';
 $conn=new MySQLi('localhost',$usr,$pass,$db); 
 
